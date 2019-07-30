@@ -7,6 +7,11 @@ describe('Test bgImage Function', () => {
         expect(bgImage(scope.testData)).to.deep.equal(scope.expect);
     });
 
+    it('Should provide correct emoji background image given urlGenerator parameters', () => {
+        const scope = urlGeneratorDataForFunction;
+        expect(bgImage(scope.testData)).to.deep.equal(scope.expect);
+    });
+
     it('Shoud provide correct emoji background image based on default parameters', () => {
         const scope = noSpecifiedConfig;
         expect(bgImage(scope.testData)).to.deep.equal(scope.expect);
@@ -27,5 +32,16 @@ const noSpecifiedConfig = {
         },
         expect: {
             'backgroundImage': 'url(my_asset/128/sampleEmoji.png)'
+        }
+    },
+    urlGeneratorDataForFunction = {
+        testData: {
+            unified: 'sampleEmoji',
+            assetPath: 'my_asset',
+            emojiResolution: '128',
+            urlGenerator: (a, b, c) => `${a}/${b}/${c}`
+        },
+        expect: {
+            'backgroundImage': 'url(my_asset/128/sampleEmoji)'
         }
     };

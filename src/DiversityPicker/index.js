@@ -5,7 +5,7 @@ import emojiAccessor from '../emoji-data/emoji_accessor';
 import { bgImage } from '../Emoji/helpers';
 import './style.scss';
 
-function DiversityPicker({ index, assetPath, emojiResolution, onEmojiClick, close, disable }) {
+function DiversityPicker({ index, assetPath, emojiResolution, onEmojiClick, close, disable, urlGenerator }) {
 
     if (disable) {
         return null;
@@ -28,7 +28,7 @@ function DiversityPicker({ index, assetPath, emojiResolution, onEmojiClick, clos
     return (
         <div className={className}>{
             diversities && diversities.map((diversity) => {
-                const style = bgImage({ unified: diversity, assetPath, emojiResolution });
+                const style = bgImage({ unified: diversity, assetPath, emojiResolution, urlGenerator });
                 return (
                     <a key={diversity}
                         style={style}

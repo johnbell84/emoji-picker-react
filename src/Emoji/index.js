@@ -99,7 +99,7 @@ class Emoji extends Component {
 
     render() {
         const { emoji, hidden, categorySeen } = this.props;
-        const { activeModifier, assetPath, emojiResolution } = this.context;
+        const { activeModifier, assetPath, emojiResolution, urlGenerator } = this.context;
         let unified = emoji.unified;
         const shownClass = (categorySeen && !hidden) ? ' shown' : '';
 
@@ -107,7 +107,7 @@ class Emoji extends Component {
 
         const className = `emoji${this.hasDiversities ? ' has-diversities' : ''}${shownClass}`;
 
-        const style = bgImage({ unified, assetPath, emojiResolution });
+        const style = bgImage({ unified, assetPath, emojiResolution, urlGenerator });
         style.order = emoji.order;
 
         return (
