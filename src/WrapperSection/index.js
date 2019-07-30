@@ -137,7 +137,8 @@ class WrapperSection extends Component {
             assetPath,
             onEmojiClick,
             emojiResolution,
-            disableDiversityPicker
+            disableDiversityPicker,
+            urlGenerator
         } = this.context;
 
         const wrapperClassName = `wrapper${filter && Object.keys(filter).length === 0 ? ' no-results icn-magnifier' : ''}`;
@@ -149,7 +150,8 @@ class WrapperSection extends Component {
                     emojiResolution={emojiResolution}
                     onEmojiClick={onEmojiClick}
                     close={closeDiversitiesMenu}
-                    disable={disableDiversityPicker}/>
+                    disable={disableDiversityPicker}
+                    urlGenerator={urlGenerator}/>
                 <div className="scroller" ref={(scroller) => this._scroller = scroller}><div/></div>
                 <span className="emoji-name" ref={(emojiName) => this._emojiName = emojiName}></span>
                 <EmojiList filter={filter}

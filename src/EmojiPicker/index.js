@@ -42,10 +42,10 @@ class EmojiPicker extends Component {
     }
 
     getChildContext() {
-        const { assetPath, emojiResolution, disableDiversityPicker, customCategoryNames} = this.props;
+        const { assetPath, emojiResolution, disableDiversityPicker, customCategoryNames, urlGenerator} = this.props;
         const { activeModifier } = this.state;
         const { openDiversitiesMenu } = this;
-        return { onEmojiClick: this.onEmojiClick, parent: this, assetPath, activeModifier, emojiResolution, openDiversitiesMenu, disableDiversityPicker, customCategoryNames };
+        return { onEmojiClick: this.onEmojiClick, parent: this, assetPath, activeModifier, emojiResolution, openDiversitiesMenu, disableDiversityPicker, customCategoryNames, urlGenerator };
     }
 
     componentDidMount() {
@@ -243,7 +243,8 @@ EmojiPicker.propTypes = {
     emojiResolution: PropTypes.number,
     preload: PropTypes.bool,
     customCategoryNames: PropTypes.object,
-    disableDiversityPicker: PropTypes.bool
+    disableDiversityPicker: PropTypes.bool,
+    urlGenerator: PropTypes.func
 };
 
 EmojiPicker.childContextTypes = {
@@ -254,7 +255,8 @@ EmojiPicker.childContextTypes = {
     activeModifier: PropTypes.string,
     emojiResolution: PropTypes.number,
     openDiversitiesMenu: PropTypes.func,
-    disableDiversityPicker: PropTypes.bool
+    disableDiversityPicker: PropTypes.bool,
+    urlGenerator: PropTypes.func
 };
 
 export default EmojiPicker;

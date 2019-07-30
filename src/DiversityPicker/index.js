@@ -46,7 +46,8 @@ DiversityPicker.propTypes = {
     emojiResolution: PropTypes.number,
     onEmojiClick: PropTypes.func.isRequired,
     close: PropTypes.func.isRequired,
-    disable: PropTypes.bool
+    disable: PropTypes.bool,
+    urlGenerator: PropTypes.func
 };
 
 export default DiversityPicker;
