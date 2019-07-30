@@ -8,7 +8,7 @@ export default function bgImage({ unified, assetPath, emojiResolution, urlGenera
 
     const url = urlGenerator ? 
         urlGenerator(assetPath, emojiResolution || DEFAULT_IMAGE_RESOLUTION, unified) :
-        `${assetPath}/${emojiResolution ? emojiResolution : DEFAULT_IMAGE_RESOLUTION}/${unified}.png`
+        `${assetPath}/${emojiResolution ? emojiResolution : DEFAULT_IMAGE_RESOLUTION}/${unified}.png`;
 
     return {
         'backgroundImage': `url(${url})`

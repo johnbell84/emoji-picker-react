@@ -189,5 +189,6 @@ WrapperSection.contextTypes = {
     assetPath: PropTypes.string,
     activeModifier: PropTypes.string,
     emojiResolution: PropTypes.number,
-    disableDiversityPicker: PropTypes.bool
+    disableDiversityPicker: PropTypes.bool,
+    urlGenerator: PropTypes.func
 };

@@ -139,7 +139,8 @@ Emoji.contextTypes = {
     activeModifier: PropTypes.string,
     emojiResolution: PropTypes.number,
     openDiversitiesMenu: PropTypes.func,
-    disableDiversityPicker: PropTypes.bool
+    disableDiversityPicker: PropTypes.bool,
+    urlGenerator: PropTypes.func
 };
 
 export default Emoji;
