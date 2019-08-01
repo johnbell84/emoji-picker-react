@@ -25,9 +25,12 @@ class Emoji extends Component {
         const visibilityChanged = nextProps.hidden !== this.props.hidden,
             categoryVisibilityChanged = nextProps.categorySeen !== this.props.categorySeen,
             hasDiversities = this.hasDiversities,
-            activeModifierChanged = hasDiversities && nextContext.activeModifier !== this.context.activeModifier;
+            activeModifierChanged = hasDiversities && nextContext.activeModifier !== this.context.activeModifier,
+            assetPathChanged = nextContext.assetPath !== this.context.assetPath,
+            urlGeneratorChanged = nextContext.urlGenerator !== this.context.urlGenerator,
+            emojiResolutionChanged = nextContext.emojiResolution !== this.context.emojiResolution;
 
-        return visibilityChanged || categoryVisibilityChanged || activeModifierChanged;
+        return visibilityChanged || categoryVisibilityChanged || activeModifierChanged || urlGeneratorChanged || assetPathChanged || emojiResolutionChanged;
     }
 
     onClick(e) {
