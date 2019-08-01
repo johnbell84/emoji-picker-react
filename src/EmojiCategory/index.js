@@ -42,7 +42,9 @@ EmojiCategory.propTypes = {
     category: PropTypes.object.isRequired,
     filter: PropTypes.object,
     categorySeen: PropTypes.bool,
-    _emojiName: PropTypes.object
+    _emojiName: PropTypes.object,
+    assetPath: PropTypes.string.isRequired,
+    urlGenerator: PropTypes.func.isRequired
 };
 
 EmojiCategory.contextTypes = {

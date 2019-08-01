@@ -101,7 +101,7 @@ class Emoji extends Component {
     }
 
     render() {
-        const { emoji, hidden, categorySeen, assetPath, urlGenerator  } = this.props;
+        const { emoji, hidden, categorySeen, assetPath, urlGenerator } = this.props;
         const { activeModifier, emojiResolution} = this.context;
         let unified = emoji.unified;
         const shownClass = (categorySeen && !hidden) ? ' shown' : '';

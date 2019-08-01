@@ -59,7 +59,9 @@ EmojiList.propTypes = {
     seenCategories: PropTypes.object.isRequired,
     preload: PropTypes.bool,
     _emojiName: PropTypes.object,
-    customCategoryNames: PropTypes.object
+    customCategoryNames: PropTypes.object,
+    assetPath: PropTypes.string.isRequired,
+    urlGenerator: PropTypes.func.isRequired
 };
 
 EmojiList.contextTypes = {
