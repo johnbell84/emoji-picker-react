@@ -26,8 +26,8 @@ class EmojiList extends Component {
         return Object.keys(nextProps.seenCategories).length !== Object.keys(this.props.seenCategories).length;
     }
 
-    render() {
-        const { filter, onScroll, seenCategories, preload, customCategoryNames, _emojiName } = this.props;
+    render() {      
+        const { filter, onScroll, seenCategories, preload, customCategoryNames, _emojiName, assetPath, urlGenerator } = this.props;
         const filterClass = filter ? ' filter' : '';
         return (
             <div className={`emoji-list${filterClass}`}
@@ -43,7 +43,9 @@ class EmojiList extends Component {
                             filter={filter}
                             customCategoryNames={customCategoryNames}
                             _emojiName={_emojiName}
-                            categorySeen={isCategorySeen}/>
+                            categorySeen={isCategorySeen}
+                            assetPath={assetPath}
+                            urlGenerator={urlGenerator}/>
                     );
                 })}
             </div>

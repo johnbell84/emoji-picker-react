@@ -7,6 +7,7 @@ import WrapperSection from '../WrapperSection';
 import SearchBar from '../SearchBar';
 
 import './style.scss';
+import { DEFAULT_CDN_PATH } from '../constants';
 
 const CLASSNAME_CATEGORY_INDEX = 1;
 const CLASSNAME_MODIFIER_INDEX = 2;

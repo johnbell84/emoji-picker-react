@@ -101,8 +101,8 @@ class Emoji extends Component {
     }
 
     render() {
-        const { emoji, hidden, categorySeen } = this.props;
-        const { activeModifier, assetPath, emojiResolution, urlGenerator } = this.context;
+        const { emoji, hidden, categorySeen, assetPath, urlGenerator  } = this.props;
+        const { activeModifier, emojiResolution} = this.context;
         let unified = emoji.unified;
         const shownClass = (categorySeen && !hidden) ? ' shown' : '';
 
@@ -132,18 +132,18 @@ Emoji.propTypes = {
     categorySeen: PropTypes.bool,
     member: PropTypes.number.isRequired,
     disableDiversityPicker: PropTypes.bool,
-    _emojiName: PropTypes.object
+    _emojiName: PropTypes.object,
+    assetPath: PropTypes.string,
+    urlGenerator: PropTypes.func
 };
 
 Emoji.contextTypes = {
     onEmojiClick: PropTypes.func,
     parent: PropTypes.any,
-    assetPath: PropTypes.string,
     activeModifier: PropTypes.string,
     emojiResolution: PropTypes.number,
     openDiversitiesMenu: PropTypes.func,
-    disableDiversityPicker: PropTypes.bool,
-    urlGenerator: PropTypes.func
+    disableDiversityPicker: PropTypes.bool
 };
 
 export default Emoji;

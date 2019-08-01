@@ -5,7 +5,7 @@ import emojiAccessor from '../emoji-data/emoji_accessor';
 import Emoji from '../Emoji';
 import './style.scss';
 
-function EmojiCategory({ index, category, filter, categorySeen, _emojiName }, {customCategoryNames}) {
+function EmojiCategory({ index, category, filter, categorySeen, _emojiName, assetPath, urlGenerator }, {customCategoryNames}) {
     const hiddenClass = filter && !filter.hasOwnProperty(category.name) ? ' hidden' : '';
 
     const categoryName = customCategoryNames && customCategoryNames[category.name] ? customCategoryNames[category.name] : `#${category.name}`;
@@ -28,7 +28,9 @@ function EmojiCategory({ index, category, filter, categorySeen, _emojiName }, {c
                         key={index}
                         hidden={hidden}
                         _emojiName={_emojiName}
-                        categorySeen={categorySeen}/>
+                        categorySeen={categorySeen}
+                        assetPath={assetPath}
+                        urlGenerator={urlGenerator}/>
                 );
             })}
         </div>
