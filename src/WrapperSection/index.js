@@ -160,6 +160,8 @@ class WrapperSection extends Component {
                     modifiersSpread={modifiersSpread}
                     preload={preload}
                     _emojiName={this._emojiName}
+                    assetPath={assetPath}
+                    urlGenerator={urlGenerator}
                     ref={(list) => this._list = (list ? list._list : null)}/>
             </section>
         );
