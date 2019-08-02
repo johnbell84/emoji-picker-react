@@ -26,8 +26,8 @@ class Emoji extends Component {
             categoryVisibilityChanged = nextProps.categorySeen !== this.props.categorySeen,
             hasDiversities = this.hasDiversities,
             activeModifierChanged = hasDiversities && nextContext.activeModifier !== this.context.activeModifier,
-            assetPathChanged = nextContext.assetPath !== this.context.assetPath,
-            urlGeneratorChanged = nextContext.urlGenerator !== this.context.urlGenerator,
+            assetPathChanged = nextProps.assetPath !== this.props.assetPath,
+            urlGeneratorChanged = nextProps.urlGenerator !== this.props.urlGenerator,
             emojiResolutionChanged = nextContext.emojiResolution !== this.context.emojiResolution;
 
         return visibilityChanged || categoryVisibilityChanged || activeModifierChanged || urlGeneratorChanged || assetPathChanged || emojiResolutionChanged;
