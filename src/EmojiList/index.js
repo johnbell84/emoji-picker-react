@@ -19,6 +19,14 @@ class EmojiList extends Component {
             return true;
         }
 
+        if (this.props.assetPath !== nextProps.assetPath) {
+            return true;
+        }
+
+        if (this.props.urlGenerator !== nextProps.urlGenerator) {
+            return true;
+        }
+
         if (activeModifier !== this.context.activeModifier) {
             return true;
         }
@@ -29,6 +37,7 @@ class EmojiList extends Component {
     render() {      
         const { filter, onScroll, seenCategories, preload, customCategoryNames, _emojiName, assetPath, urlGenerator } = this.props;
         const filterClass = filter ? ' filter' : '';
+        
         return (
             <div className={`emoji-list${filterClass}`}
                 ref={(list) => this._list = list}
