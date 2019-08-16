@@ -29,14 +29,14 @@ $opacity_category_name: .9 !default;
 
 // Padding
 $padding_main: 10px !default;
-$padding_emoji: 5px !default;
+$padding_emoji: 8px !default;
 $padding_emoji_list: 5px !default;
 $padding_category_name: $padding_emoji_list * 2 !default; // padding of the category name
 $padding_nav: $padding_main !default; // categories padding
 $padding_search_bar: $padding_main !default; // search bar padding
 
 // Width / Height
-$size_emoji: 20px !default; // size of each emoji (no padding)
+$size_emoji: 96px !default; // size of each emoji (no padding)
 $size_modifier: 10px !default; // width/height of the skintone chooser
 $height_category_name: 30px !default; // height of the category name container
 $height_diversity_picker: 30px !default; // height of the diversity picker
