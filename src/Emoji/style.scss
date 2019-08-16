@@ -2,15 +2,19 @@
 
 .emoji-picker .emoji {
     border-radius: 5px;
-    height: $size_emoji;
-    width: $size_emoji;
-    padding: $padding_emoji;
-    background-size: $size_emoji;
+    // height: $size_emoji;
+    // width: $size_emoji;
+    // padding: $padding_emoji;
+    // background-size: $size_emoji;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     overflow: hidden;
     transition: background-color .2s;
     display: none;
+    width: 96px;
+    height: 96px;
+    background-size: 96px;
+    padding: 8px;
 
     &.shown {
         display: inline-block;

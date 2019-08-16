@@ -8,6 +8,7 @@
         overflow-x: hidden;
         box-sizing: border-box;
         -ms-overflow-style: none;
+        flex: 1 1 0px;
 
         &::-webkit-scrollbar {
             height: 0;

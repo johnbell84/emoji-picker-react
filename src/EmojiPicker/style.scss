@@ -2,14 +2,19 @@
 
 .emoji-picker {
     background-color: $bg_picker;
-    width: $width_picker + 5px;
-    display: block;
+    //width: $width_picker + 5px;
+    //display: block;
     position: relative;
     padding: 0;
     border: 1px solid $border_emoji_picker;
     border-radius: 3px;
     overflow: hidden;
     font-family: sans-serif;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     .hidden {
         display: none!important;
